@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 18px;
+    transition: 0.1s;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #3c3c3c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home {
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home img {
+    width: 25%;
+}
+
+.search {
+    width: 90vh;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search .query, .btn {
+    background-color: rgba(255, 255, 255, 0.155);
+    color: #ffffff;
+}
+
+.query {
+    border-bottom: 2px solid #ffffff;
+    border-radius: 3px;
+    width: 500px;
+    height: 40px;
+}
+
+.query:hover {
+    border-bottom: 2px solid #00eeff;
+    color: #00eeff;
+}
+
+.btn {
+    border: 2px solid #ffffff;
+    border-radius: 3px;
+    height: 42px;
+    width: 42px;
+}
+
+.btn:hover {
+    border: 2px solid #00eeff;
+    color: #00eeff;
+}
+
+.shortcut {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shortcut:hover {
+    /* background-color: rgba(255, 255, 255, 0.155); */
+    color: #00eeff;
+    border: 2px solid #00eeff;
+}
+
+.items {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.shortcuts {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav {
+    width: 100%;
+    height: 50px;
+    background-color: #373737;
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+    align-items: center;
+    position: fixed;
+}
+
+.nItems {
+    height: 60%;
+}
+
+.nItems2 {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.276);
+    width: auto;
+    gap: 10px;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.nItems2:hover {
+    color: #00eeff;
+    border: 2px solid #00eeff;
+}
+
+#time {
+    color: #ffffff;
+    font-size: 36px;
+}
+
+.time {
+    text-align: center;
+}
