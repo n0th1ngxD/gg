@@ -3,9 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>New Tab</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon">
+
 </head>
 <body>
+    <div class="nav">
+        <div class="nItems">
+            <a href="https://www.youtube.com/">
+                <div class="nItems2">
+                    <i class="fa-brands fa-youtube"></i>
+                    <h6>Youtube</h6>
+                </div>
+            </a>
+        </div>
+
+        <div class="nItems">
+            <a href="https://pointercrate.com/">
+                <div class="nItems2">
+                    <i class="fa-solid fa-list"></i>
+                    <h6>Demon List</h6>
+                </div>
+            </a>
+        </div>
+
+        <div class="nItems">
+            <a href="https://www.demonlistvn.com/">
+                <div class="nItems2">
+                    <i class="fa-solid fa-star"></i>
+                    <h6>VN Demon List</h6>
+                </div>
+            </a>
+        </div>
+
+        <div class="nItems">
+            <a href="https://github.com/">
+                <div class="nItems2">
+                    <i class="fa-brands fa-github"></i>
+                    <h6>Github</h6>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="home">
+        <img src="assets/icon.png" alt="xD">
+        <div class="homee">
+            <div class="time">
+                <span id="time"></span>
     
+                <script src="time.js"></script>
+            </div>
+            <div class="search">
+                <input type="text" id="" class="query" placeholder="  Search Google or type a URL">
+                <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="shortcuts">
+        <a href="https://youtube.com">
+            <div class="shortcut">
+                <div class="items">
+                    <i class="fa-brands fa-youtube fa-2xl"></i>
+                    <h5>Youtube</h5>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://chat.zalo.me">
+            <div class="shortcut">
+                <div class="items">
+                    <i class="fa-solid fa-z fa-2xl"></i>
+                    <h5>Zalo</h5>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://roblox.com">
+            <div class="shortcut">
+                <div class="items">
+                    <i class="fa-solid fa-r fa-2xl"></i>
+                    <h5>Roblox</h5>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://mail.google.com">
+            <div class="shortcut">
+                <div class="items">
+                    <i class="fa-solid fa-envelope fa-2xl"></i>
+                    <h5>Gmail</h5>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://facebook.com">
+            <div class="shortcut">
+                <div class="items">
+                    <i class="fa-brands fa-facebook fa-2xl"></i>
+                    <h5>Facebook</h5>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    <script>
+        let query = document.querySelector(".query");
+        let btn = document.querySelector(".btn");
+        btn.onclick = function() {
+            if(query.value == "") {
+                alert("Please enter a search term");
+                location.reload();
+            } else {
+                let url = "https://google.com/search?q=" + query.value;
+                window.open(url, "_self");
+            }
+        }
+
+        query.addEventListener("keypress", function(e) {
+            if(e.key == "Enter") {
+                if(query.value == "") {
+                alert("Please enter a search term");
+                location.reload();
+            } else {
+                let url = "https://google.com/search?q=" + query.value;
+                window.open(url, "_self");
+            }
+                // e.preventDefault();
+            }
+        })
+    </script>
 </body>
 </html>
